@@ -1,4 +1,6 @@
+import { Outlet } from "react-router-dom";
 import LeftSitebar from "../share/LeftSitebar";
+import NewsCard from "../share/NewsCard";
 import RightSiteBar from "../share/RightSiteBar";
 import BreakingNews from "./breakingNews/BreakingNews";
 import Header from "./Header";
@@ -14,13 +16,14 @@ const Home = () => {
         <div className="grid md:grid-cols-4 gap-5">
           {" "}
           {/*left Right and middle Site*/}
-          <div className="border">
+          <div>
             <LeftSitebar></LeftSitebar>
           </div>
-          <div className="md:col-span-2 border font-bold text-black">
-            Dragon News Home
+          <div className="md:col-span-2 font-bold text-black">
+            <Outlet></Outlet>
           </div>
-          <div className="border">
+          {/* right site */}
+          <div>
             <RightSiteBar></RightSiteBar>
           </div>
         </div>

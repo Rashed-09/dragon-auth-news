@@ -1,18 +1,13 @@
+import { useLoaderData } from "react-router-dom";
+import Newses from "./newsCard/Newses";
 
 const NewsCard = () => {
+  const newses = useLoaderData()
     return (
       <div>
-        <div>
-          <div>
-            <div>
-              <img src="" alt="" />
-              <div>
-                <p></p>
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {
+          newses.map(news => <Newses key={news._id} newses={news}></Newses>)
+        } 
       </div>
     );
 };

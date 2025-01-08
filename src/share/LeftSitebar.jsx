@@ -15,7 +15,7 @@ const LeftSitebar = () => {
         <h2 className="font-bold text-black">All Categories</h2>
         <div>
             {
-                categories.map(category => <Link to={`/category/${category.name}`} className="block p-4 " key={category.id}>{category.name}</Link>)
+                categories.map(category => <Link to={`/category/${category.id}`} className="block p-4 " key={category.id}>{category.name}</Link>)
             }
         </div>
       </div>
