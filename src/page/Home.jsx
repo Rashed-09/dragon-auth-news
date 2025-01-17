@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import LeftSitebar from "../share/LeftSitebar";
-import NewsCard from "../share/NewsCard";
 import RightSiteBar from "../share/RightSiteBar";
 import BreakingNews from "./breakingNews/BreakingNews";
 import Header from "./Header";

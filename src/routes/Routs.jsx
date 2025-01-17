@@ -3,6 +3,8 @@ import Root from "../Root/Root";
 import Login from "../loginRegister/Login";
 import Register from "../loginRegister/Register";
 import NewsCard from "../share/NewsCard";
+import NewsDetails from "../share/newsCard/NewsDetails";
+import PrivetRout from "./PrivetRout";
 
 
 const router = createBrowserRouter([
@@ -13,7 +15,11 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <NewsCard></NewsCard>,
-                loader: () => fetch("news.json")
+                loader: () => fetch("/news.json")
+            },
+            {
+                path : "/newsDetails/:id",
+                element: <PrivetRout><NewsDetails></NewsDetails></PrivetRout>
             }
         ]
         
